@@ -8,6 +8,15 @@
 
         if('geolocation' in navigator){
             console.log("geolocation available");
+            //get curretn position , when its ready use it (through call back function)
+            navigator.geolocation.getCurrentPosition(position => {
+                const lat = position.coords.latitude;
+                const long = position.coords.longitude;
+                document.getElementById("latitude").textContent = lat;
+                document.getElementById("longitude").textContent = long;
+                
+              //  console.log(position.coords.longitude);
+            });
         }
         else
         {
@@ -15,5 +24,8 @@
         }
 
     </script>
+
+    <p>Latitude : <span id="latitude"></span><br/>
+    Longitude: <span id="longitude"></span></p>
   </body>
 </html>
