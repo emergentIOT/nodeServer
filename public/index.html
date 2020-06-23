@@ -15,7 +15,7 @@
                 document.getElementById("latitude").textContent = lat;
                 document.getElementById("longitude").textContent = long;
                 
-              //  console.log(position.coords.longitude);
+              
 
               //Sending data to Node Server eg from clinet to server side, for storage in DB
               const data = {lat, long};
@@ -27,6 +27,7 @@
                 body: JSON.stringify(data)
               };
              
+              //Sending POST request to server
               const response = await fetch("/api", options);
               const json = await response.json(); 
               console.log(json);
