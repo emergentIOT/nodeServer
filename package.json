@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/emergentIOT/nodeServer/issues"
   },
-  "homepage": "https://github.com/emergentIOT/nodeServer#readme"
+  "homepage": "https://github.com/emergentIOT/nodeServer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
